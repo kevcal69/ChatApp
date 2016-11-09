@@ -1,0 +1,151 @@
+body {
+    background: url('bg.jpg');
+}
+.app {
+    font-family: 'Roboto', sans-serif;
+    width: 800px;
+    height: 600px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.brand-logo {
+    font-weight: 200;
+}
+.m-nav {
+    width: 800px;
+    height: 600px;
+}
+.m-nav nav{
+    height: 100px;
+}
+
+.brand-logo {
+    height: 200px;
+}
+.brand-logo h1 {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.brand-logo .logo img{
+    width: 144px;
+    height: 74px;
+}
+
+.m-nav .another-user {
+    font-size: .8em;
+    font-weight: 200;
+    text-decoration: underline;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+
+.m-container .row, .m-container .col {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.m-sidebar {
+    border-right: 1px solid #CFD8DC;
+}
+
+.m-sidebar .collection, .m-sidebar .collection li  {
+    border: none;
+    color: #212121;
+}
+
+.m-sidebar .avatar .logout{
+    padding: 5px;
+    margin: 0;
+    font-size: .7em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.m-sidebar .contacts {
+    overflow-x: auto;
+}
+
+/* Let's get this party started */
+.m-sidebar .contacts::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+    right: 0;
+}
+
+/* Handle */
+.m-sidebar .contacts::-webkit-scrollbar-thumb {
+    background-color: #BDBDBD;
+    border-radius: 5px;
+}
+
+.m-conversation .input {
+    height: 150px;
+    padding: 0 20px;
+    overflow-x: auto;
+}
+
+/* Let's get this party started */
+.input::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+    right: 0;
+}
+
+/* Handle */
+.input::-webkit-scrollbar-thumb {
+    background-color: #BDBDBD;
+    border-radius: 5px;
+}
+
+.messages {
+    overflow-x: auto;
+}
+
+/* Let's get this party started */
+.messages::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+    right: 0;
+}
+
+/* Handle */
+.messages::-webkit-scrollbar-thumb {
+    background-color: #BDBDBD;
+    border-radius: 5px;
+}
+
+.messages .collection, .messages .collection li {
+    border: none;
+}
+
+.messages .collection li .user-pic {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.message p {
+    margin: 0;
+    font-size: .85em;
+}
+.message {
+    border-radius: 10px !important;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.m-content {
+    position: relative;
+}
+
+.loader-container {
+    position: relative;;
+    z-index: 9;
+    top: 0;
+    width: 800px;
+    height: 600px;
+    background: #607D8B;
+}
