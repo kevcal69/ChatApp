@@ -19,6 +19,13 @@ var $setWelcomeScreen = function(isSignedIn, user) {
     }
 }
 
+// Function that holds all function to be called when succesfule login
+var $successfulLogin = function(user) {
+    saveUser(user);
+    $setUserAvatar(user);
+    populateSidebar();
+}
+
 // Fetch user from firebase auth
 var $user = firebase.auth().currentUser;
 // Check if user is present
@@ -58,9 +65,8 @@ $('.signin').on('click', function() {
             // Set time out to add effect.
             setTimeout(function() {
                 $('.loader-container').fadeOut(100, function () {
-                    $('.loader-container').addClass('hide');
                     // Helper function to set user avatar
-                    $setUserAvatar($user);
+                    $successfulLogin($user)
                 });
             }, 1000);
         } else {
@@ -73,7 +79,7 @@ $('.signin').on('click', function() {
 
                 $('.loader-container').fadeOut(100, function () {
                     // Helper function to set user avatar
-                    $setUserAvatar(user);
+                    $successfulLogin(user)
                 });
             }).catch(function(error) {
                 // Handle Errors here.
@@ -91,8 +97,10 @@ $('.logout').on('click', function() {
         // Sign-out successful.
         var $nav = $('.m-nav');
         $user = null;
-        $('.loader-container').fadeIn(100)
-        $nav.slideDown();
+        $('.loader-container').fadeIn(100, function() {
+            console.log('ss')
+            $nav.slideDown();
+        });
     }, function(error) {
         // An error happened.
         console.log(error);

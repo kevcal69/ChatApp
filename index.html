@@ -78,44 +78,33 @@
                 <div class="col s4 m-sidebar flex-shrink flex color white">
                     <ul class="collection with-header flex col">
                         <li class="collection-header collection-item avatar flex-shrink" id="user-avatar">
-                                <h4></h4>
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title">Contacts</span>
-                                <p class="logout"><em>Logout</em></p>
+                            <h4></h4>
+                            <img src="http://lorempixel.com/400/200/" alt="" class="circle">
+                            <span class="title">Contacts</span>
+                            <p class="logout"><em>Logout</em></p>
                         </li>
-                        <div class="contacts flex col">
-                            <li class="collection-item avatar">
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title truncate">Kevin Calingacasdassssssssssssssssion</span>
-                                <p> <em>Online</em></p>
-                            </li>
-                            <li class="collection-item avatar">
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title truncate">Kevin Calingacasdassssssssssssssssion</span>
-                                <p> <em>Online</em></p>
-                            </li>
-                            <li class="collection-item avatar">
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title truncate">Kevin Calingacasdassssssssssssssssion</span>
-                                <p> <em>Online</em></p>
-                            </li>
-                            <li class="collection-item avatar">
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title truncate">Kevin Calingacasdassssssssssssssssion</span>
-                                <p> <em>Online</em></p>
-                            </li>
-                            <li class="collection-item avatar">
-                                <img src="http://lorempixel.com/400/200/" alt="" class="circle">
-                                <span class="title truncate">Kevin Calingacasdassssssssssssssssion</span>
-                                <p> <em>Online</em></p>
+                        <li class="collection-header collection-item flex-shrink">
+                            <div class="row">
+                                <div class="input-field">
+                                    <input id="first_name2" type="text" class="create-room">
+                                    <label class="active" data-error="room exist" data-success="created" for="first_name2">Create Room</label>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="rooms contacts flex col">
+                            <li class="collection-item hide" id="roomTemplate">
+                                <div>
+                                    <span class="title"></span>
+                                    <a href="#!" class="secondary-content"><i class="material-icons join">send</i></a>
+                                </div>
                             </li>
                         </div>
                     </ul>
                 </div>
                 <div class="col s8 m-conversation flex col">
                     <div class="messages flex-grow">
-                        <ul class="collection flex col full-width">
-                            <li class="collection-item">
+                        <ul class="collection flex col full-width" id="conversation">
+                            <li class="collection-item hide" id="other">
                                 <div class="row">
                                     <div class="col s1">
                                         <div class="user-pic flex">
@@ -125,63 +114,63 @@
                                     <div class="col s8">
                                         <div class="message color color grey lighten-1">
                                             <p>
-                                                the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog
-                                                the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog
+
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="collection-item">
+                            <li class="collection-item hide" id="you">
                                 <div class="row">
                                     <div class="col s8 push-s3">
                                         <div class="message color color blue-grey lighten-4">
                                             <p>
-                                                the quick brown fox jumps over the lazy dog the quickumps over the lazy dog
-                                                the quick brown fox jumps over the lazy dog the quick bro
-                                            </div>
-                                        </div>
-                                        <div class="col s1 push-s3">
-                                            <div class="user-pic flex">
-                                                <img src="http://lorempixel.com/400/200/" alt="" class="circle responsive-img">
-                                            </div>
+
+                                            </p>
                                         </div>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="input flex-shrink color">
-                            <form >
-                                <div class="input-field">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                                    <label for="icon_prefix2">First Name</label>
+                                    <div class="col s1 push-s3">
+                                        <div class="user-pic flex">
+                                            <img src="http://lorempixel.com/400/200/" alt="" class="circle responsive-img">
+                                        </div>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="input flex-shrink color">
+                        <form >
+                            <div class="input-field">
+                                <i class="material-icons prefix messagebody">mode_edit</i>
+                                <textarea id="icon_prefix2" class="materialize-textarea message-textarea"></textarea>
+                                <label for="icon_prefix2">First Name</label>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-auth.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyBnd1B4Fm8iQISYrxb6T1a_OU8ucPntx28",
-            authDomain: "chatapp-a9a91.firebaseapp.com",
-            databaseURL: "https://chatapp-a9a91.firebaseio.com",
-            storageBucket: "chatapp-a9a91.appspot.com",
-            messagingSenderId: "240177965145"
-          };
-          firebase.initializeApp(config);
-        </script>
-        <script src="authenticate.js" charset="utf-8"></script>
-        <script src="database.js" charset="utf-8"></script>
-    </body>
-    </html>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-database.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBnd1B4Fm8iQISYrxb6T1a_OU8ucPntx28",
+        authDomain: "chatapp-a9a91.firebaseapp.com",
+        databaseURL: "https://chatapp-a9a91.firebaseio.com",
+        storageBucket: "chatapp-a9a91.appspot.com",
+        messagingSenderId: "240177965145"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="authenticate.js" charset="utf-8"></script>
+    <script src="database.js" charset="utf-8"></script>
+</body>
+</html>
